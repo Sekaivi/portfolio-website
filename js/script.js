@@ -8,14 +8,6 @@ let buttons;
 let lastHoveredButton ;
 let background ;
 
-/* POUR LES IMAGES QUI TOMBENT */
-
-let photoCadres ;
-let animationDuration = 16 * 1000; 
-let delayBetweenAnimations = 8 * 1000; 
-let currentlyAnimating = []; 
-
-
 
 function init(){
 
@@ -121,26 +113,5 @@ function createStars() {
 }
 
 
-/* POUR LES PHOTOS QUI TOMBENT :D */
-
-function startAnimation() {
-    if (currentlyAnimating.length >= 3) return; // Ensure only 2 animations at a time
-
-    const availableElements = photoCadres.filter(el => !currentlyAnimating.includes(el));
-    if (availableElements.length === 0) return; // No available elements to animate
-
-    const randomElement = availableElements[Math.floor(Math.random() * availableElements.length)];
-    currentlyAnimating.push(randomElement);
-
-    // Apply the animation class
-    randomElement.style.animation = 'fallingPic 16s forwards ease-in-out';
-
-    // Remove the element from animation after it ends
-    setTimeout(() => {
-        randomElement.style.animation = 'none'; // Reset animation
-        currentlyAnimating = currentlyAnimating.filter(el => el !== randomElement);
-        startAnimation(); // Start a new animation after this one completes
-    }, animationDuration);
-}
 
 
