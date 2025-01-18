@@ -166,25 +166,27 @@
 
 @keyframes fallingPic {
     0% {
-        transform: translateY(-50vh) rotate(0) scale(0.8);
+        opacity: 1;
+        transform: translateY(100vw) rotate(0) scale(0.8);
     }
     100% {
-        transform: translateY(50%) rotate(var(--rotate))  scale(1.1);
+        opacity: 1;
+        transform: translateY(var(--translate-Y)) rotate(var(--rotate))  scale(1.1);
     }
 }
 
 @keyframes retroFloatPic {
     0% {
-        transform: translateY(50%) rotate(var(--rotate))  scale(1.1);
+        transform: translateY(var(--translate-Y)) rotate(var(--rotate))  scale(1.1);
     }
     50% {
-        transform: translateY(calc(50% + 6px)) rotate(var(--rotate))  scale(1.1)
+        transform: translateY(calc(var(--translate-Y) + 6px)) rotate(var(--rotate))  scale(1.1)
     }
     100% {
-        transform: translateY(50%) rotate(var(--rotate))  scale(1.1);
+        transform: translateY(var(--translate-Y)) rotate(var(--rotate))  scale(1.1);
     }
     100%, 200% { 
-        transform: translateY(50%) rotate(var(--rotate))  scale(1.1);
+        transform: translateY(var(--translate-Y)) rotate(var(--rotate))  scale(1.1);
     }
 }
 
@@ -679,14 +681,15 @@ main{
 .photo_cadre {
     position: absolute;
     --rotate: 0deg;
-    --translate-x: 0px;
-    transform: translateY(-100vh) rotate(var(--rotate)) translateX(var(--translate-x));
-    top: 0;
+    transform: translateY(100vh) rotate(var(--rotate)) translateX(var(--translate-x));
+    top: 25%;
+    opacity: 0;
 }
 
 /* Specific styles for each photo_cadre */
 .photo_cadre:nth-of-type(even) {
     --rotate: -15deg;
+    --translate-Y: 1px;
     left: 0;
     z-index: -2;
     animation: fallingPic 1.5s 2s forwards ease-in-out , retroFloatPic 4s 3.5s infinite ;
@@ -694,6 +697,7 @@ main{
 
 .photo_cadre:nth-of-type(odd) {
     --rotate: 15deg;
+    --translate-Y: 1px;
     right: 0;
     z-index: -3;
     animation: fallingPic 1.5s 2.5s forwards ease-in-out , retroFloatPic 4s 4.5s infinite ;
