@@ -7,30 +7,61 @@ let shine_path = 'media/visual_assets/shine.svg'
 let buttons;
 let lastHoveredButton ;
 let background ;
+/*CARROUSSEL */
+let carouselContainer ;
+let prevButton ;
+let nextButton ;
+let currentIndex = 0;
 
 
 function init(){
+
+    /* CARROUSSEL */
+    carouselContainer = document.querySelector('.carousel-container');
+    prevButton = document.querySelector('.carousel-button.prev');
+    nextButton = document.querySelector('.carousel-button.next');
+    if(nextButton){
+        nextButton.addEventListener('click', () => {
+            const totalItems = document.querySelectorAll('.carousel-item').length;
+            currentIndex = (currentIndex + 1) % totalItems; // Loop back to the first item
+            updateCarousel();z
+        });
+    }
+    
+    if(prevButton){
+        prevButton.addEventListener('click', () => {
+            const totalItems = document.querySelectorAll('.carousel-item').length;
+            currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Loop to the last item
+            updateCarousel();
+        });
+    }
 
     background = document.getElementById('background'); 
     if(background){createStars() ;}
 
     buttons = document.getElementsByClassName('button') ;
-    lastHoveredButton = buttons[0]
-    lastHoveredButton.classList.add('hovered');
-    Array.from(buttons).forEach(button=>{
-        for (let i = 0; i < 4; i++) {
-            let selection = document.createElement('img');
-            selection.src = 'media/visual_assets/selection.svg' ;
-            button.appendChild(selection) ;
-        }
-    })
-    Array.from(buttons).forEach(button => {
-        /* pour le hover */
-        button.addEventListener('mouseenter', handleHover);
-        button.addEventListener('mouseleave', () => {
-            lastHoveredButton.classList.add('hovered');
+    console.log(buttons) ;
+    if(buttons.length>0){
+
+        lastHoveredButton = buttons[0]
+        lastHoveredButton.classList.add('hovered');
+        Array.from(buttons).forEach(button=>{
+            for (let i = 0; i < 4; i++) {
+                let selection = document.createElement('img');
+                selection.src = 'media/visual_assets/selection.svg' ;
+                button.appendChild(selection) ;
+            }
+        })
+        Array.from(buttons).forEach(button => {
+            /* pour le hover */
+            button.addEventListener('mouseenter', handleHover);
+            button.addEventListener('mouseleave', () => {
+                lastHoveredButton.classList.add('hovered');
+            });
         });
-    });
+
+    }
+    
 
     let i = 1.75;
     let menu = document.getElementById('menu_accueil') ;
@@ -72,12 +103,7 @@ function init(){
         document.querySelector('main').style.display = 'flex';
     };
 
-    /* POUR LES PHOTOS */
-    photoCadres = Array.from(document.querySelectorAll('.photo_cadre'));
-    // Start the first animation immediately
-    startAnimation();
-    // Start the second animation after a delay
-    setTimeout(startAnimation, delayBetweenAnimations);
+  
 }
 
 function handleHover() {
@@ -113,5 +139,9 @@ function createStars() {
 }
 
 
+/* CARROUSSEL */
 
-
+function updateCarousel() {
+    const itemWidth = document.querySelector('.carousel-item').offsetWidth;
+    carouselContainer.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+}
