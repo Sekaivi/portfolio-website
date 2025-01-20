@@ -236,6 +236,10 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body {
+    cursor: url("/media/visual_assets/star.ico"), default;
+}
+
 /* SCROLLBAR */
 
 a{
@@ -735,6 +739,7 @@ main{
     display: flex;
     height: 180px;
     width: 0px;
+    white-space: nowrap;
     padding: 24px 0 ;
     max-width: 2200px;
     align-items: center;
