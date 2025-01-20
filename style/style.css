@@ -1290,6 +1290,10 @@ main{
     align-self: stretch;
 }
 
+footer a{
+    color: white;
+}
+
 #mentionslegales{
     color: #EA5D9C;
     text-align: center;
