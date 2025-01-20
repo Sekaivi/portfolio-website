@@ -1513,4 +1513,33 @@ main{
     font-size: 20px ;
 }
 
+#section_projet{
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.projet_cat{
+    margin-right: 0;
+    padding: 24px 10px;
+    font-size: 24px;
+}
+
+.projet_detail{
+    flex-flow: column nowrap;
+    gap: 24px;
+}
+
+.outils_taches{
+    flex-flow: column nowrap;
+    align-items: stretch;
+}
+
+.outils_projet , .mes_taches {
+    width: auto;
+}
+
+
+
+
 }
