@@ -4,10 +4,40 @@
             <title>Mayssa Rouibah</title>
             <meta charset="UTF-8"/>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
-            <link rel="stylesheet" type="text/css" href="style/style.css" />
-            <script src="js/script.js"></script>
+            <link rel="stylesheet" type="text/css" href="/style/style.css" />
+            <script src="/js/script.js"></script>
         </head>
         <body>
+            <header>
+
+                <div id="menu">
+
+                    <img id="menu_icon" src="media/visual_assets/menu-lune.png" alt="menu"/>
+
+                    <div id="menu_container">
+                        <svg id="close_menu" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 30 31" fill="none">
+                            <path d="M0.455689 27.7888C-0.139508 27.1936 -0.139508 26.2286 0.455689 25.6334L25.2428 0.846301C25.838 0.251103 26.803 0.251103 27.3982 0.8463L29.5536 3.0017C30.1488 3.5969 30.1488 4.5619 29.5536 5.1571L4.76649 29.9442C4.17129 30.5394 3.20629 30.5394 2.61109 29.9442L0.455689 27.7888Z" fill="white"/>
+                            <path d="M29.5443 27.7888C30.1395 27.1936 30.1395 26.2286 29.5443 25.6334L4.7572 0.846301C4.162 0.251103 3.197 0.251103 2.6018 0.8463L0.446398 3.0017C-0.148799 3.5969 -0.148799 4.5619 0.446398 5.1571L25.2335 29.9442C25.8287 30.5394 26.7937 30.5394 27.3889 29.9442L29.5443 27.7888Z" fill="white"/>
+                        </svg>
+                        <a href="/index.html">
+                            <img src="media/visual_assets/home.png"/>
+                        </a>
+                        <a href="/accueil#.html#a_propos">
+                            <img src="media/visual_assets/profile.png"/>
+                        </a>
+                        <a href="/projets.html">
+                            <img src="media/visual_assets/projects.png"/>
+                        </a>
+                        <a class="contact" target="_blank" href="mailto:rouibahmayssa@gmail.com">
+                            <img src="media/visual_assets/mail.png"/>
+                        </a>
+                        <a class="contact" target="_blank" href="https://linkedin.com/in/mayssa-rouibah">
+                            <img src="media/visual_assets/linkedin.png"/>
+                        </a>
+                    </div>
+                </div>
+
+            </header>
             <section id="loading-screen">
                 <p style="font-family: 'Winkle';font-size: 32px;color: white;">Loading...</p>
                 <div class="loader"><img src="media/visual_assets/star.png" alt="étoile"/></div>
@@ -21,15 +51,25 @@
                     </div>
                     <div class="window" style="margin-top: 150px;">
                         <div class="head_window">
-                            <div class="title_window">Titre</div>
+                            <div class="title_window">A propos</div>
                             <div class="boxes"></div>
                             <div class="shine"></div>
                         </div>
-                        <div class="content"></div>
+                        <div class="content">
+                            <p style="font-weight: 700;">Je m’appelle <span style="color: #EA5D9C;">Mayssa</span>, une développeuse web passionnée par les lignes de code.
+                            </p>
+                            <p>
+                                Je suis actuellement en deuxième année de <a style="text-decoration: underline;" href="https://www.onisep.fr/ressources/univers-formation/formations/post-bac/but-metiers-du-multimedia-et-de-l-internet-parcours-creation-numerique" target="_blank">
+                            BUT Métiers du Multimédia et de l’Internet</a> à l’IUT de Bobigny, au sein du parcours <span style="color: #EA5D9C;">développement web et dispositifs Interactifs</span>. Une formation qui m’a permis d’être non seulement à l’aise avec les technologies de développement <span style="color: #EA5D9C;">front-end</span> tel que le HTML, CSS et Javascript, mais aussi de <span style="color: #EA5D9C;">back-end</span> avec le PHP et SQL. Ces compétences ont été acquises grâce aux nombreux projets sur lesquels nous avons été amenés à travailler : conception d’interface web, gestion de bases de données, implémentation de fonctionnalités tel que pages web dynamiques, back office, modes de connexion, espace commentaire, etc. Ces expériences m'ont permis de consolider ma capacité à travailler sur des <span style="color: #EA5D9C;">projets concrets</span>, ainsi qu’animer ma <span style="color: #EA5D9C;">passion</span> pour le <span style="color: #EA5D9C;">développement</span> d’applications web.
+                            </p>
+                            <p>
+                                Je recherche une <span style="color: #EA5D9C;">alternance</span> pour le mois de <span style="color: #EA5D9C;">septembre 2025</span> dans le domaine du <span style="color: #EA5D9C;">développement web</span> ou <span style="color: #EA5D9C;">d’applications</span>. 
+                            </p>
+                        </div>
                     </div>
                     <div class="buttons">
-                        <div style="opacity: 0; animation: floatIn 0.3s 2.2s forwards ease-in-out;" class="button"><a href="CV">Consulter mon cv</a></div>
-                        <div style="opacity: 0;  animation: floatIn 0.3s 2.5s forwards ease-in-out;" class="button"><a href="#">me contActer</a></div>
+                        <div style="opacity: 0; animation: floatIn 0.3s 2.2s forwards ease-in-out;" class="button"><a href="/ROUIBAH_MAYSSA_CV.pdf" target="_blank">Consulter mon cv</a></div>
+                        <div style="opacity: 0;  animation: floatIn 0.3s 2.5s forwards ease-in-out;" class="button"><a onclick="me_contacter()">me contActer</a></div>
                     </div>
                     <div id="photos_fond">
                         <div class="photo_cadre"><div class="cadre_1"><div class="cadre_2"><div class="cadre_3"><img src="media/pics/triangles_and_me.jpg" alt="PHOTO DE MOI"/></div></div></div></div>
@@ -225,52 +265,61 @@
                     <div class="carousel">
                         <div class="carousel-container">
                             <div class= "projets carousel-item">
-                                <div style="animation-delay: 1s ;" class="window" >
+                                <a href="/projets/twewydle.html" style="animation-delay: 1s ;" class="window" >
                                     <div class="head_window">
-                                        <div class="title_window">Titre</div>
+                                        <div class="title_window">TWEWY-dle</div>
                                         <div class="boxes"></div>
                                         <div class="shine"></div>
                                     </div>
-                                    <div class="content"></div>
-                                </div>
+                                    <div class="content">
+                                        <img alt="Preview TWEWYdle" src="media/projets/twewy/visual.png"/>
+                                    </div>
+                                </a>
+
+                                <a href="/projets/khwiki.html" style="animation-delay: 3s ;" class="window" >
+                                    <div class="head_window">
+                                        <div class="title_window">KH Wiki</div>
+                                        <div class="boxes"></div>
+                                        <div class="shine"></div>
+                                    </div>
+                                    <div class="content">
+                                        <img alt="Preview KH wiki" src="media/projets/khwiki/visual.png"/>
+                                    </div>
+                                </a>
             
-                                <div style="animation-delay: 2s ;" class="window" >
+                                <a href="/projets/datavizualisation.html" style="animation-delay: 2s ;" class="window" >
                                     <div class="head_window">
-                                        <div class="title_window">Titre</div>
+                                        <div class="title_window">Data Visualisation</div>
                                         <div class="boxes"></div>
                                         <div class="shine"></div>
                                     </div>
-                                    <div class="content"></div>
-                                </div>
+                                    <div class="content">
+                                        <img alt="Preview Data visualisation" src="media/projets/dataviz/visual.png"/>
+                                    </div>
+                                </a>
             
-                                <div style="animation-delay: 3s ;" class="window" >
-                                    <div class="head_window">
-                                        <div class="title_window">Titre</div>
-                                        <div class="boxes"></div>
-                                        <div class="shine"></div>
-                                    </div>
-                                    <div class="content"></div>
-                                </div>
                             </div>
                             
                             <div class="projets carousel-item">
-                                <div style="animation-delay: 4s ;" class="window" >
+                                <a href="/projets/fixsou.html" style="animation-delay: 4s ;" class="window" >
                                     <div class="head_window">
-                                        <div class="title_window">Titre</div>
+                                        <div class="title_window">Fixsou</div>
                                         <div class="boxes"></div>
                                         <div class="shine"></div>
                                     </div>
-                                    <div class="content"></div>
-                                </div>
+                                    <div class="content">
+                                        <img alt="Preview Data visualisation" src="media/projets/fixsou/visual.png"/>
+                                    </div>
+                                </a>
             
-                                <div style="animation-delay: 5s ;" class="window" >
+                                <a style="animation-delay: 5s ;" class="window" >
                                     <div class="head_window">
-                                        <div class="title_window">Titre</div>
+                                        <div class="title_window">Work in progress</div>
                                         <div class="boxes"></div>
                                         <div class="shine"></div>
                                     </div>
                                     <div class="content"></div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                         

@@ -214,6 +214,16 @@
     }
 }
 
+@keyframes showContact{
+    from{
+        transform: scale(1);
+        filter: drop-shadow(0px 0px 0px #EA5D9C);
+    }to{
+        transform: scale(1.2);
+        filter: drop-shadow(0px 0px 12px #EA5D9C);
+    }
+}
+
 
 
 *{
@@ -226,7 +236,33 @@ html {
     scroll-behavior: smooth;
 }
 
+/* SCROLLBAR */
+
+a{
+    color: #EA5D9C;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {background-color: #000000;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B14573; 
+  }
+
 body{
+    position: relative;
     min-height: 100vh;
     background-color: black;
     display: flex;
@@ -240,8 +276,50 @@ body > *{
     max-width: 2000px;   
 }
 
+
 header{
-    position: absolute;
+    padding: 24px 24px;
+    max-width: 2000px;   
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 100;
+    position: fixed;
+}
+
+#menu{
+    display: flex;
+    flex-flow: column nowrap ;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu_icon{
+    max-width: 100px;
+}
+
+#menu_icon:hover{
+    cursor: pointer;
+}
+
+#close_menu:hover{
+    cursor: pointer;
+}
+
+#menu_container{
+    display: none;
+    padding: 16px 16px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    border-radius: 60px;
+    border: 2px solid #FFF;
+    background: linear-gradient(180deg, #830034 0%, #000 46.5%, #830034 100%);
+}
+
+#menu_container img{
+    max-width: 40px;
+    max-height: 40px;
 }
 
 main{
@@ -263,6 +341,7 @@ main{
     z-index: 1000;
     gap: 80px;
 }
+
 
 #background {
     overflow: hidden;
@@ -554,10 +633,12 @@ main{
 }
 
 .window{
+    text-align: justify;
+    padding-bottom: 16px;
     position: relative;
     color: #FFFFFF;
     display: flex;
-    width: 700px;
+    max-width: 90vh;
     min-height: 277px;
     flex-direction: column;
     align-items: flex-start;
@@ -570,6 +651,7 @@ main{
     box-shadow: 0px 0px 0px 6px #FF9FC5, 0px 0px 20px 10px rgba(255, 159, 197, 0.75);
     animation: retroFloat 4s infinite;
 }
+
 
 .window:hover{
     animation-play-state: paused;
@@ -1202,4 +1284,15 @@ main{
     font-family: 'Outfit';
     font-size: 14px;
     font-weight: 700;
+}
+
+
+.projets .content{
+    padding: 0;
+    overflow: hidden;
+}
+
+.projets .window{
+    gap: 0;
+    padding: 0;
 }

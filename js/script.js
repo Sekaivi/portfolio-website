@@ -12,9 +12,23 @@ let carouselContainer ;
 let prevButton ;
 let nextButton ;
 let currentIndex = 0;
+let moon ;
+let close_menu ;
+let menu_container ;
+let menu_open = false ;
 
 
 function init(){
+
+    /* pour le menu */
+    moon = document.getElementById('menu_icon') ;
+    close_menu = document.getElementById('close_menu') ;
+    menu_container = document.getElementById('menu_container') ;
+    if(moon && close_menu && menu_container){
+        moon.addEventListener('click', menu_click) ;
+        close_menu.addEventListener('click', menu_click) ;
+    }
+
 
     /* CARROUSSEL */
     carouselContainer = document.querySelector('.carousel-container');
@@ -40,7 +54,6 @@ function init(){
     if(background){createStars() ;}
 
     buttons = document.getElementsByClassName('button') ;
-    console.log(buttons) ;
     if(buttons.length>0){
 
         lastHoveredButton = buttons[0]
@@ -105,6 +118,37 @@ function init(){
 
   
 }
+
+/* POUR LE MENUUUU */
+
+function menu_click(){
+    if(menu_open){
+        menu_open = false ;
+        menu_container.style.display = 'none' ;
+    }else{
+        let contact_items = document.getElementsByClassName('contact') ;
+        Array.from(contact_items).forEach(contact=>{
+        contact.style.animation = 'none';
+    })
+        menu_container.style.display = 'flex' ;
+        menu_open = true ;
+    }
+}
+
+function me_contacter(){
+    menu_container.style.display = 'flex' ;
+    menu_open = true ;
+    let contact_items = document.getElementsByClassName('contact') ;
+    let i = 0 ;
+    Array.from(contact_items).forEach(contact=>{
+        contact.style.animation = 'none';
+        contact.offsetHeight;
+        contact.style.animation = 'showContact 0.5s ' +i+'s alternate 2 forwards ease-in-out' ;
+        i++
+    })
+}
+
+
 
 function handleHover() {
     Array.from(buttons).forEach(button => button.classList.remove('hovered'));
