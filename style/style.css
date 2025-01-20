@@ -650,7 +650,6 @@ main{
 
 .window:hover{
     animation-play-state: paused;
-    z-index: 1000;
 }
 
 .head_window{
