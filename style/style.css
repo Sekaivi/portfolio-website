@@ -1503,6 +1503,7 @@ main{
 }
 
 #projets_page #infos{
+    width: 100%;
     align-self: center;
     min-height: 100px;
     height: fit-content;
