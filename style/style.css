@@ -1452,10 +1452,6 @@ main{
     display: none;
 }
 
-#competences_section{
-    height: auto;
-}
-
 .img_outil{
     max-width: 80px;
     max-height: 80px;
@@ -1476,5 +1472,19 @@ main{
 .star_outil{
     font-size: 28px;
 }
+
+#projets_accueil .carousel-button{
+    display: none;
+}
+
+.carousel-container{
+    flex-flow: column wrap;
+}
+
+#footerinfos{
+    flex-flow: column wrap;
+    gap: 32px;
+}
+
 
 }
