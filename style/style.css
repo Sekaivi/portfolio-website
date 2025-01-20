@@ -655,6 +655,7 @@ main{
 
 .window:hover{
     animation-play-state: paused;
+    transform: translateY(100px);
 }
 
 .head_window{
@@ -1320,7 +1321,3 @@ main{
 }
 
 /* funny little interactions */
-
-.projets_accueil .window:hover{
-    transform: translateY(100px);
-}
