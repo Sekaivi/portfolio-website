@@ -1324,7 +1324,9 @@ main{
     }
 
     header{
+        box-sizing: border-box;
         padding: 16px 16px;
+        max-width: 95vw;
     }
 
     .button a{
@@ -1403,11 +1405,19 @@ main{
     height: fit-content;
 }
 
-.titre_section{
-    font-size: 32px;
-    max-width: 90vw;
+.titre_section_fond{
+    height: fit-content;
 }
 
+.titre_section{
+    font-size: 32px;
+    height: auto;
+    -webkit-text-stroke: 10px black ;
+}
+
+.titre_section :nth-child(1){
+    transform: translate(5px, 5px); 
+}
 
 
 #a_propos{
