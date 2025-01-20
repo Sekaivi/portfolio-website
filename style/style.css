@@ -1473,8 +1473,17 @@ main{
     font-size: 28px;
 }
 
+#projets_accueil{
+    padding: 150px 24px 24px 24px;
+}
+
 #projets_accueil .carousel-button{
     display: none;
+    gap: 32px;
+}
+
+.projets{
+    margin-top: 0;
 }
 
 .carousel-container{
@@ -1484,6 +1493,8 @@ main{
 #footerinfos{
     flex-flow: column wrap;
     gap: 32px;
+    align-items: center;
+    justify-content: center;
 }
 
 
