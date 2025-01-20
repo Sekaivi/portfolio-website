@@ -655,7 +655,7 @@ main{
 
 .window:hover{
     animation-play-state: paused;
-    transform: translateY(100px);
+    z-index: 1000;
 }
 
 .head_window{
