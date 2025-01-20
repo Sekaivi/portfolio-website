@@ -239,7 +239,6 @@ html {
 /* SCROLLBAR */
 
 a{
-    color: #EA5D9C;
     text-decoration: none;
 }
 
@@ -1216,7 +1215,7 @@ main{
     align-self: stretch;
     display: flex ;
     flex-flow: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     gap: 24px;
 }
