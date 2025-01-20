@@ -1358,5 +1358,18 @@ main{
     position: relative;
 }
 
+#titre{
+    gap: 32px;   
+}
+
+#Mayssa{
+    font-size: 92px;
+}
+
+#Rouibah{
+    font-size: 42px;
+}
+
+
 
 }
