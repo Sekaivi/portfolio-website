@@ -1191,8 +1191,16 @@ main{
     align-self: stretch;
 }
 
+
 .projet_text .outils_projet{
     width: 320px;
+}
+
+.projet_text .outils_projet img{
+    border: 4px solid #EA5D9C;
+    background: #FFF;
+    box-shadow: 4px 4px 0px 0px #EA5D9C;
+
 }
 
 .projet_text .mes_taches{
