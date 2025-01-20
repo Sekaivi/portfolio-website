@@ -649,6 +649,7 @@ main{
     background: #000;
     box-shadow: 0px 0px 0px 6px #FF9FC5, 0px 0px 20px 10px rgba(255, 159, 197, 0.75);
     animation: retroFloat 4s infinite;
+    transition: transform 1s ease-in-out ;
 }
 
 
@@ -1316,4 +1317,10 @@ main{
 .projets .window{
     gap: 0;
     padding: 0;
+}
+
+/* funny little interactions */
+
+.projets_accueil .window:hover{
+    transform: translateY(100px);
 }
