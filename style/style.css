@@ -1268,6 +1268,7 @@ main{
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+    font-family: 'Outifit';
 }
 
 .footer_titre{
@@ -1427,12 +1428,6 @@ main{
     gap: 32px;
 }
 
-#photo_fond{
-    display: flex;
-    flex-flow: column wrap;
-    position: relative;
-}
-
 .photo_cadre{
     position: relative;
 }
@@ -1448,7 +1443,7 @@ main{
 }
 
 
-#photo_fond{
+#photos_fond{
     display: none;
 }
 
@@ -1479,15 +1474,16 @@ main{
 
 #projets_accueil .carousel-button{
     display: none;
-    gap: 32px;
 }
 
 .projets{
     margin-top: 0;
 }
 
-.carousel-container{
+#projets_page .carousel-container, 
+#projets_accueil .carousel-container{
     flex-flow: column wrap;
+    gap: 32px;
 }
 
 #footerinfos{
@@ -1496,6 +1492,15 @@ main{
     align-items: center;
     justify-content: center;
 }
+
+#projets_page{
+    padding: 150px 24px 24px 24px;
+}
+
+#projets_page .carousel-button{
+    display: none;
+}
+
 
 
 }
