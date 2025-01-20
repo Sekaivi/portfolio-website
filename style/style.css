@@ -549,7 +549,7 @@ main{
 
 #futur_dev{
     font-family: "PlanetKosmos";
-    font-size: 34;
+    font-size: 34px;
     letter-spacing: 1.75px;
 }
 
@@ -1374,19 +1374,23 @@ main{
     font-size: 92px;
 }
 
-#Mayssa :nth-child(1){
-    -webkit-text-stroke: 8px #FF9FC5;
-    text-stroke: 8px #FF9FC5;
-    transform: translate(5px, 5px); 
-}
-
-#Mayssa :nth-child(2){
-    -webkit-text-stroke: 16px #FF9FC5;
-    transform: translate(0px, 0px); 
-}
-
 #Rouibah{
     font-size: 42px;
+}
+
+#futur_dev{
+    font-size: 24px;
+}
+
+#profil{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#photo_accueil{
+    max-height: none;
+    width: 100%;
 }
 
 
