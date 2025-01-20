@@ -1532,21 +1532,25 @@ main{
     gap: 24px;
 }
 
-.description_projet{
+.projet_text{
     width: 100%;
 }
 
-.outils_taches{
+.projet_text .description_projet{
+    width: 100%;
+}
+
+.projet_text .outils_taches{
     gap: 24px;
     flex-flow: column nowrap;
     align-items: stretch;
 }
 
-.outils_projet{
+.projet_text .outils_projet{
     width: 100%;
 }
 
-.mes_taches{
+.projet_text .mes_taches{
     width: 100%;
 }
 
