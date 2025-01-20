@@ -1411,7 +1411,7 @@ main{
 
 .titre_section{
     font-size: 32px;
-    height: auto;
+    height: 200px;
     -webkit-text-stroke: 10px black ;
 }
 
@@ -1439,6 +1439,12 @@ main{
 
 .cadre_3{
     max-width: 80vw;
+}
+
+.buttons{
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
 }
 
 
