@@ -1411,7 +1411,7 @@ main{
 
 .titre_section{
     font-size: 32px;
-    height: 200px;
+    height: auto;
     -webkit-text-stroke: 10px black ;
 }
 
@@ -1447,5 +1447,22 @@ main{
     justify-content: center;
 }
 
+
+#photo_fond{
+    display: none;
+}
+
+.img_outil{
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.nom_outil{
+    font-size: 42px;
+}
+
+.competence{
+    font-size: 42px;
+}
 
 }
