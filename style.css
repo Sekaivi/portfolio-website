@@ -1323,12 +1323,10 @@ main{
         max-width: 100%;
     }
 
-    main{
-        padding: 16px 8px;
-    }
-
     header{
+        box-sizing: border-box;
         padding: 16px 16px;
+        max-width: 95vw;
     }
 
     .button a{
@@ -1405,6 +1403,34 @@ main{
     max-width: none;
     min-height: none;
     height: fit-content;
+}
+
+.titre_section{
+    font-size: 32px;
+    max-width: 90vw;
+}
+
+
+
+#a_propos{
+    height: auto;
+    padding: 16px 8px;
+    max-height: none;
+    gap: 32px;
+}
+
+#photo_fond{
+    display: flex;
+    flex-flow: column wrap;
+    position: relative;
+}
+
+.photo_cadre{
+    position: relative;
+}
+
+.cadre_3{
+    max-width: 80vw;
 }
 
 
