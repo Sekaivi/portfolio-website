@@ -1294,6 +1294,10 @@ main{
     color: white;
 }
 
+.liste_footer a:hover{
+    text-decoration: underline #EA5D9C;
+}
+
 #mentionslegales{
     color: #EA5D9C;
     text-align: center;
