@@ -1523,7 +1523,7 @@ main{
 
 .projet_cat{
     margin-right: 0;
-    align-items: center;
+    align-self: center;
     padding: 24px 10px;
     font-size: 24px;
 }
