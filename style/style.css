@@ -1514,13 +1514,15 @@ main{
 }
 
 #section_projet{
+    padding-top: 150px;
     gap: 32px;
     align-items: center;
     justify-content: center;
+    padding-bottom: 32px;
 }
 
 .projet_cat{
-    margin-right: 0;
+    margin-right: auto;
     padding: 24px 10px;
     font-size: 24px;
 }
@@ -1530,10 +1532,24 @@ main{
     gap: 24px;
 }
 
+.description_projet{
+    width: 100%;
+}
+
 .outils_taches{
+    gap: 24px;
     flex-flow: column nowrap;
     align-items: stretch;
 }
+
+.outils_projet{
+    width: 100%;
+}
+
+.mes_taches{
+    width: 100%;
+}
+
 
 .outils_projet , .mes_taches {
     width: auto;
