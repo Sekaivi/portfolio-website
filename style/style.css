@@ -1360,10 +1360,12 @@ main{
     justify-content: center;
     align-items: center;
     position: relative;
+    padding: 16px 16px;
 }
 
 #Accueil_text{
-    padding: 16px 16px;
+    padding: 0 ;
+    gap: 32px;
 }
 
 #titre{
