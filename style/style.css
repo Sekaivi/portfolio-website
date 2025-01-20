@@ -1452,6 +1452,10 @@ main{
     display: none;
 }
 
+#competences_section{
+    height: auto;
+}
+
 .img_outil{
     max-width: 80px;
     max-height: 80px;
@@ -1463,6 +1467,14 @@ main{
 
 .competence{
     font-size: 42px;
+}
+
+.star_competence{
+    font-size: 28px;
+}
+
+.star_outil{
+    font-size: 28px;
 }
 
 }
