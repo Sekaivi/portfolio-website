@@ -1,9 +1,9 @@
 
 window.addEventListener("DOMContentLoaded",init,false)
-let line = 'media/visual_assets/line.svg' ;
-let window_box = 'media/visual_assets/window.svg' ;
-let cross = 'media/visual_assets/cross.svg' ;
-let shine_path = 'media/visual_assets/shine.svg'
+let line = '/media/visual_assets/line.svg' ;
+let window_box = '/media/visual_assets/window.svg' ;
+let cross = '/media/visual_assets/cross.svg' ;
+let shine_path = '/media/visual_assets/shine.svg'
 let buttons;
 let lastHoveredButton ;
 let background ;
@@ -61,7 +61,7 @@ function init(){
         Array.from(buttons).forEach(button=>{
             for (let i = 0; i < 4; i++) {
                 let selection = document.createElement('img');
-                selection.src = 'media/visual_assets/selection.svg' ;
+                selection.src = '/media/visual_assets/selection.svg' ;
                 button.appendChild(selection) ;
             }
         })
