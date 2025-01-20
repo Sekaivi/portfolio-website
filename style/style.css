@@ -1522,7 +1522,8 @@ main{
 }
 
 .projet_cat{
-    margin-right: auto;
+    margin-right: 0;
+    align-items: center;
     padding: 24px 10px;
     font-size: 24px;
 }
