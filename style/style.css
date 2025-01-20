@@ -1327,6 +1327,10 @@ main{
         padding: 16px 16px;
     }
 
+    .button a{
+        font-size: 16px;
+    }
+
     #menu_icon{
         max-width: 65px;
     }
@@ -1356,6 +1360,10 @@ main{
     justify-content: center;
     align-items: center;
     position: relative;
+}
+
+#Accueil_text{
+    padding: 16px 8px;
 }
 
 #titre{
