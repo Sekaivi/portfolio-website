@@ -1320,11 +1320,7 @@ main{
 @media screen and (max-width: 1200px){
     
     body > *{
-        max-width: 100vw;
-    }
-
-    main{
-        padding: 16px 8px;
+        max-width: 100%;
     }
 
     header{
@@ -1358,7 +1354,7 @@ main{
     #ACCUEIL
 {   width: 100%;
     min-height: 100vh;
-    max-width: 100vw;
+    max-width: 100%;
     display: flex;
     flex-flow: column nowrap ;
     justify-content: center;
@@ -1373,7 +1369,7 @@ main{
 }
 
 #titre{
-    gap: 32px;   
+    gap: 48px;   
 }
 
 #Mayssa{
@@ -1404,6 +1400,35 @@ main{
     padding-bottom: 8px ;
     max-width: none;
     min-height: none;
+    height: fit-content;
+}
+
+.titre_section{
+    font-size: 32px;
+    max-width: 90vw;
+}
+
+
+
+#a_propos{
+    height: auto;
+    padding: 16px 8px;
+    max-height: none;
+    gap: 32px;
+}
+
+#photo_fond{
+    display: flex;
+    flex-flow: column wrap;
+    position: relative;
+}
+
+.photo_cadre{
+    position: relative;
+}
+
+.cadre_3{
+    max-width: 80vw;
 }
 
 
